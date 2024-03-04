@@ -137,6 +137,7 @@ object CamaraMarca: TCamaraMarca
       Anchors = [akRight, akBottom]
       Caption = 'Nuevo'
       TabOrder = 3
+      OnClick = Button1Click
     end
     object Button2: TButton
       Left = 176
@@ -157,6 +158,15 @@ object CamaraMarca: TCamaraMarca
       Caption = 'Eliminar'
       TabOrder = 5
       OnClick = Button3Click
+    end
+    object DBEdit3: TDBEdit
+      Left = 288
+      Top = 29
+      Width = 49
+      Height = 28
+      DataField = 'ID'
+      DataSource = DataSource1
+      TabOrder = 6
     end
   end
   object RtsoftwareConnection: TFDConnection

@@ -30,8 +30,10 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    DBEdit3: TDBEdit;
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -45,10 +47,17 @@ implementation
 
 {$R *.dfm}
 
+procedure TCamaraMarca.Button1Click(Sender: TObject);
+begin
+  Cat_Camara_MarcaTable.Insert;
+  DBEdit3.Text := '0';
+end;
+
 procedure TCamaraMarca.Button2Click(Sender: TObject);
 begin
   Cat_Camara_MarcaTable.Edit;
   Cat_Camara_MarcaTable.Post;
+  Cat_Camara_MarcaTable.Refresh;
 end;
 
 procedure TCamaraMarca.Button3Click(Sender: TObject);
