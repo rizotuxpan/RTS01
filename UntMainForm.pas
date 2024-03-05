@@ -22,6 +22,7 @@ type
     PanelMainWindow: TPanel;
     procedure MnuCatCamMarcasClick(Sender: TObject);
     procedure MnuCatCamTiposClick(Sender: TObject);
+    procedure MnuCatCamModelosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,7 +36,7 @@ implementation
 
 {$R *.dfm}
 
-uses UntCamaraMarca, untCamaraTipo;
+uses UntCamaraMarca, untCamaraTipo, UntCamaraModelo;
 
 
 procedure TWndMainForm.MnuCatCamMarcasClick(Sender: TObject);
@@ -47,6 +48,15 @@ begin
   wnd.Visible := True;
 end;
 
+
+procedure TWndMainForm.MnuCatCamModelosClick(Sender: TObject);
+var
+  wnd: TCamaraModelo;
+begin
+  wnd := TCamaraModelo.Create(Self);
+  wnd.Parent := WndMainForm;
+  wnd.Visible := True;
+end;
 
 procedure TWndMainForm.MnuCatCamTiposClick(Sender: TObject);
 var

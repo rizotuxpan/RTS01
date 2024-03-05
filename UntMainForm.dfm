@@ -65,6 +65,7 @@ object WndMainForm: TWndMainForm
         end
         object MnuCatCamModelos: TMenuItem
           Caption = 'Modelos'
+          OnClick = MnuCatCamModelosClick
         end
       end
     end
