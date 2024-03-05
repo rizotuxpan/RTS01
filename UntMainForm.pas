@@ -20,9 +20,19 @@ type
     StatusBar1: TStatusBar;
     ToolBar1: TToolBar;
     PanelMainWindow: TPanel;
+    MnuCatSw: TMenuItem;
+    MnuCatSwMarcas: TMenuItem;
+    MnuCatSwModelos: TMenuItem;
+    CatRad: TMenuItem;
+    CatRadMarcas: TMenuItem;
+    CatRadModelos: TMenuItem;
     procedure MnuCatCamMarcasClick(Sender: TObject);
     procedure MnuCatCamTiposClick(Sender: TObject);
     procedure MnuCatCamModelosClick(Sender: TObject);
+    procedure MnuCatSwMarcasClick(Sender: TObject);
+    procedure MnuCatSwModelosClick(Sender: TObject);
+    procedure CatRadMarcasClick(Sender: TObject);
+    procedure CatRadModelosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,8 +46,27 @@ implementation
 
 {$R *.dfm}
 
-uses UntCamaraMarca, untCamaraTipo, UntCamaraModelo;
+uses UntCamaraMarca, untCamaraTipo, UntCamaraModelo, UntSwitchMarca,
+  UntSwitchModelo, UntRadioMarca, UntRadioModelo;
 
+
+procedure TWndMainForm.CatRadMarcasClick(Sender: TObject);
+var
+  wnd: TRadioMarca;
+begin
+  wnd := TRadioMarca.Create(Self);
+  wnd.Parent := WndMainForm;
+  wnd.Visible := True;
+end;
+
+procedure TWndMainForm.CatRadModelosClick(Sender: TObject);
+var
+  wnd: TRadioModelo;
+begin
+  wnd := TRadioModelo.Create(Self);
+  wnd.Parent := WndMainForm;
+  wnd.Visible := True;
+end;
 
 procedure TWndMainForm.MnuCatCamMarcasClick(Sender: TObject);
 var
@@ -63,6 +92,23 @@ var
   wnd: TCamaraTipo;
 begin
   wnd := TCamaraTipo.Create(Self);
+  wnd.Parent := WndMainForm;
+  wnd.Visible := True;
+end;
+
+procedure TWndMainForm.MnuCatSwMarcasClick(Sender: TObject);
+var
+  wnd: TSwitchMarca;
+begin
+  wnd := TSwitchMarca.Create(Self);
+  wnd.Parent := WndMainForm;
+  wnd.Visible := True;
+end;
+
+procedure TWndMainForm.MnuCatSwModelosClick(Sender: TObject);
+var wnd: TSwitchModelo;
+begin
+  wnd := TSwitchModelo.Create(Self);
   wnd.Parent := WndMainForm;
   wnd.Visible := True;
 end;

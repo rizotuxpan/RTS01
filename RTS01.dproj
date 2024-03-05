@@ -58,6 +58,7 @@
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
         <SanitizedProjectName>RTS01</SanitizedProjectName>
+        <Custom_Styles>&quot;Aqua Light Slate|VCLSTYLE|$(BDSCOMMONDIR)\Styles\AquaLightSlate.vsf&quot;;&quot;Windows10 SlateGray|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows10SlateGray.vsf&quot;;&quot;Cyan Night|VCLSTYLE|$(BDSCOMMONDIR)\Styles\CyanNight.vsf&quot;;&quot;Smokey Quartz Kamri|VCLSTYLE|$(BDSCOMMONDIR)\Styles\SmokeyQuartzKamri.vsf&quot;</Custom_Styles>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_UsePackage>soapserver;IndySystem;vclwinx;fmx;vclie;DbxCommonDriver;bindengine;vcldb;IndyIPCommon;VCLRESTComponents;FireDACCommonODBC;ibxbindings;FireDACCommonDriver;appanalytics;IndyProtocols;vclx;IconFontsImageList;IndyIPClient;dbxcds;vcledge;vclFireDAC;bindcompvclwinx;bindcomp;FireDACCommon;IndyCore;RESTBackendComponents;bindcompfmx;bindcompdbx;inetdb;vclribbon;rtl;FireDACMySQLDriver;ibmonitor;FireDACSqliteDriver;DbxClientDriver;FireDACADSDriver;RESTComponents;soapmidas;DBXSqliteDriver;vcl;vclactnband;IndyIPServer;dsnapxml;fmxFireDAC;dbexpress;dsnapcon;adortl;DBXMySQLDriver;VclSmp;inet;vclimg;vcltouch;FireDACPgDriver;FireDAC;fmxase;inetdbxpress;xmlrtl;tethering;dbrtl;ibxpress;bindcompvcl;dsnap;fmxdae;CloudService;FireDACMSAccDriver;CustomIPTransport;vclib;IconFontsImageListFMX;fmxobj;bindcompvclsmp;soaprtl;vcldsnap;DBXInterBaseDriver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
@@ -119,6 +120,22 @@
         </DCCReference>
         <DCCReference Include="UntCamaraModelo.pas">
             <Form>CamaraModelo</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UntSwitchMarca.pas">
+            <Form>SwitchMarca</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UntSwitchModelo.pas">
+            <Form>SwitchModelo</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UntRadioMarca.pas">
+            <Form>RadioMarca</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UntRadioModelo.pas">
+            <Form>RadioModelo</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
