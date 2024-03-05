@@ -4,7 +4,8 @@ uses
   Vcl.Forms,
   UntMainForm in 'UntMainForm.pas' {WndMainForm},
   DatMainForm in 'DatMainForm.pas' {DMMainForm: TDataModule},
-  UntCamaraMarca in 'UntCamaraMarca.pas' {CamaraMarca};
+  UntCamaraMarca in 'UntCamaraMarca.pas' {CamaraMarca},
+  untCamaraTipo in 'untCamaraTipo.pas' {CamaraTipo};
 
 {$R *.res}
 
@@ -13,5 +14,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TWndMainForm, WndMainForm);
   Application.CreateForm(TDMMainForm, DMMainForm);
+  Application.CreateForm(TCamaraTipo, CamaraTipo);
   Application.Run;
 end.

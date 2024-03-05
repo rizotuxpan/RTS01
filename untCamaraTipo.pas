@@ -1,41 +1,39 @@
-unit UntCamaraMarca;
+unit untCamaraTipo;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.DBCtrls, Vcl.Grids,
-  Vcl.DBGrids, Vcl.ExtCtrls, Vcl.StdCtrls, FireDAC.Stan.Intf,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
   FireDAC.Phys.IB, FireDAC.Phys.IBDef, FireDAC.VCLUI.Wait, FireDAC.Stan.Param,
   FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, Vcl.Mask;
+  FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.DBCtrls, Vcl.Mask, Vcl.ExtCtrls,
+  Vcl.Grids, Vcl.DBGrids;
 
 type
-  TCamaraMarca = class(TForm)
+  TCamaraTipo = class(TForm)
     Panel1: TPanel;
-    Panel2: TPanel;
     DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
+    Panel2: TPanel;
     Label1: TLabel;
-    RtsoftwareConnection: TFDConnection;
-    Cat_camara_marcaTable: TFDQuery;
-    DataSource1: TDataSource;
     Label2: TLabel;
-    Label3: TLabel;
     DBEdit1: TDBEdit;
     DBMemo1: TDBMemo;
-    DBEdit2: TDBEdit;
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
     DBEdit3: TDBEdit;
     Button4: TButton;
+    RtsoftwareConnection: TFDConnection;
+    DataSource1: TDataSource;
+    Cat_camara_tipoTable: TFDQuery;
+    procedure Button4Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
-    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,32 +41,32 @@ type
   end;
 
 var
-  CamaraMarca: TCamaraMarca;
+  CamaraTipo: TCamaraTipo;
 
 implementation
 
 {$R *.dfm}
 
-procedure TCamaraMarca.Button1Click(Sender: TObject);
+procedure TCamaraTipo.Button1Click(Sender: TObject);
 begin
-  Cat_Camara_MarcaTable.Insert;
+   Cat_Camara_TipoTable.Insert;
   DBEdit3.Text := '0';
 end;
 
-procedure TCamaraMarca.Button2Click(Sender: TObject);
+procedure TCamaraTipo.Button2Click(Sender: TObject);
 begin
-  Cat_Camara_MarcaTable.Edit;
-  Cat_Camara_MarcaTable.Post;
-  Cat_Camara_MarcaTable.Refresh;
+  Cat_Camara_TipoTable.Edit;
+  Cat_Camara_TipoTable.Post;
+  Cat_Camara_TipoTable.Refresh;
 end;
 
-procedure TCamaraMarca.Button3Click(Sender: TObject);
+procedure TCamaraTipo.Button3Click(Sender: TObject);
 begin
-  Cat_Camara_MarcaTable.Edit;
-  Cat_Camara_MarcaTable.Delete;
+  Cat_Camara_TipoTable.Edit;
+  Cat_Camara_TipoTable.Delete;
 end;
 
-procedure TCamaraMarca.Button4Click(Sender: TObject);
+procedure TCamaraTipo.Button4Click(Sender: TObject);
 begin
   Self.Visible := False;
 end;

@@ -113,6 +113,10 @@
             <Form>CamaraMarca</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="untCamaraTipo.pas">
+            <Form>CamaraTipo</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

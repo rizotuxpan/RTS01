@@ -18,6 +18,8 @@ object WndMainForm: TWndMainForm
     Width = 816
     Height = 19
     Panels = <>
+    ExplicitTop = 397
+    ExplicitWidth = 812
   end
   object ToolBar1: TToolBar
     Left = 0
@@ -26,6 +28,7 @@ object WndMainForm: TWndMainForm
     Height = 29
     Caption = 'ToolBar1'
     TabOrder = 1
+    ExplicitWidth = 812
   end
   object PanelMainWindow: TPanel
     Left = 0
@@ -37,6 +40,8 @@ object WndMainForm: TWndMainForm
     Color = clAppWorkSpace
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 812
+    ExplicitHeight = 368
   end
   object AppMenu: TMainMenu
     Left = 560
@@ -56,6 +61,7 @@ object WndMainForm: TWndMainForm
         end
         object MnuCatCamTipos: TMenuItem
           Caption = 'Tipos'
+          OnClick = MnuCatCamTiposClick
         end
         object MnuCatCamModelos: TMenuItem
           Caption = 'Modelos'
