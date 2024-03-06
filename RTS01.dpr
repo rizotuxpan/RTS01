@@ -12,7 +12,8 @@ uses
   Vcl.Styles,
   UntSwitchModelo in 'UntSwitchModelo.pas' {SwitchModelo},
   UntRadioMarca in 'UntRadioMarca.pas' {RadioMarca},
-  UntRadioModelo in 'UntRadioModelo.pas' {RadioModelo};
+  UntRadioModelo in 'UntRadioModelo.pas' {RadioModelo},
+  UntComponenteCamara in 'UntComponenteCamara.pas' {ComponenteCamara};
 
 {$R *.res}
 
@@ -28,5 +29,6 @@ begin
   Application.CreateForm(TSwitchModelo, SwitchModelo);
   Application.CreateForm(TRadioMarca, RadioMarca);
   Application.CreateForm(TRadioModelo, RadioModelo);
+  Application.CreateForm(TComponenteCamara, ComponenteCamara);
   Application.Run;
 end.

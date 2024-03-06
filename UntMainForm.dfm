@@ -91,5 +91,11 @@ object WndMainForm: TWndMainForm
         end
       end
     end
+    object MnuComp: TMenuItem
+      Caption = 'Componentes'
+      object MnuCompCamaras: TMenuItem
+        Caption = 'C'#225'maras'
+      end
+    end
   end
 end

@@ -26,6 +26,8 @@ type
     CatRad: TMenuItem;
     CatRadMarcas: TMenuItem;
     CatRadModelos: TMenuItem;
+    MnuComp: TMenuItem;
+    MnuCompCamaras: TMenuItem;
     procedure MnuCatCamMarcasClick(Sender: TObject);
     procedure MnuCatCamTiposClick(Sender: TObject);
     procedure MnuCatCamModelosClick(Sender: TObject);
@@ -47,7 +49,7 @@ implementation
 {$R *.dfm}
 
 uses UntCamaraMarca, untCamaraTipo, UntCamaraModelo, UntSwitchMarca,
-  UntSwitchModelo, UntRadioMarca, UntRadioModelo;
+  UntSwitchModelo, UntRadioMarca, UntRadioModelo, UntComponenteCamara;
 
 
 procedure TWndMainForm.CatRadMarcasClick(Sender: TObject);
