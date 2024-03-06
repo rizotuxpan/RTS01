@@ -35,6 +35,7 @@ type
     procedure MnuCatSwModelosClick(Sender: TObject);
     procedure CatRadMarcasClick(Sender: TObject);
     procedure CatRadModelosClick(Sender: TObject);
+    procedure MnuCompCamarasClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -111,6 +112,15 @@ procedure TWndMainForm.MnuCatSwModelosClick(Sender: TObject);
 var wnd: TSwitchModelo;
 begin
   wnd := TSwitchModelo.Create(Self);
+  wnd.Parent := WndMainForm;
+  wnd.Visible := True;
+end;
+
+procedure TWndMainForm.MnuCompCamarasClick(Sender: TObject);
+var
+  wnd: TComponenteCamara;
+begin
+  wnd := TComponenteCamara.Create(Self);
   wnd.Parent := WndMainForm;
   wnd.Visible := True;
 end;

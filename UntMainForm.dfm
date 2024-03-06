@@ -2,8 +2,8 @@ object WndMainForm: TWndMainForm
   Left = 0
   Top = 0
   Caption = 'RTSoftware Videovigilancia'
-  ClientHeight = 417
-  ClientWidth = 816
+  ClientHeight = 558
+  ClientWidth = 918
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,37 +14,39 @@ object WndMainForm: TWndMainForm
   TextHeight = 15
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 398
-    Width = 816
+    Top = 539
+    Width = 918
     Height = 19
     Panels = <>
-    ExplicitTop = 394
-    ExplicitWidth = 814
+    ExplicitLeft = 8
+    ExplicitTop = 381
+    ExplicitWidth = 816
   end
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 816
+    Width = 918
     Height = 29
     Caption = 'ToolBar1'
     TabOrder = 1
-    ExplicitWidth = 814
+    ExplicitWidth = 816
   end
   object PanelMainWindow: TPanel
     Left = 0
     Top = 29
-    Width = 816
-    Height = 369
+    Width = 918
+    Height = 510
     Align = alClient
     Caption = 'RTSoftware Videovigilancia para Windows versi'#243'n 1.0'
     Color = clAppWorkSpace
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 814
-    ExplicitHeight = 365
+    ExplicitWidth = 816
+    ExplicitHeight = 346
   end
   object AppMenu: TMainMenu
-    Left = 560
+    Left = 856
+    Top = 40
     object Archivo1: TMenuItem
       Caption = 'Archivo'
       object Salir1: TMenuItem
@@ -95,6 +97,7 @@ object WndMainForm: TWndMainForm
       Caption = 'Componentes'
       object MnuCompCamaras: TMenuItem
         Caption = 'C'#225'maras'
+        OnClick = MnuCompCamarasClick
       end
     end
   end
