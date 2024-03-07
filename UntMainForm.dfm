@@ -18,8 +18,8 @@ object WndMainForm: TWndMainForm
     Width = 918
     Height = 19
     Panels = <>
-    ExplicitTop = 535
-    ExplicitWidth = 916
+    ExplicitTop = 538
+    ExplicitWidth = 914
   end
   object ToolBar1: TToolBar
     Left = 0
@@ -28,7 +28,7 @@ object WndMainForm: TWndMainForm
     Height = 29
     Caption = 'ToolBar1'
     TabOrder = 1
-    ExplicitWidth = 916
+    ExplicitWidth = 914
   end
   object PanelMainWindow: TPanel
     Left = 0
@@ -40,8 +40,8 @@ object WndMainForm: TWndMainForm
     Color = clAppWorkSpace
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 916
-    ExplicitHeight = 506
+    ExplicitWidth = 914
+    ExplicitHeight = 509
   end
   object AppMenu: TMainMenu
     Left = 856
@@ -97,6 +97,10 @@ object WndMainForm: TWndMainForm
       object MnuCompCamaras: TMenuItem
         Caption = 'C'#225'maras'
         OnClick = MnuCompCamarasClick
+      end
+      object MnuCompSwitches: TMenuItem
+        Caption = 'Switches'
+        OnClick = MnuCompSwitchesClick
       end
     end
   end
