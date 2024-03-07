@@ -14,7 +14,8 @@ uses
   UntRadioMarca in 'UntRadioMarca.pas' {RadioMarca},
   UntRadioModelo in 'UntRadioModelo.pas' {RadioModelo},
   UntComponenteCamara in 'UntComponenteCamara.pas' {ComponenteCamara},
-  UntComponenteSwitch in 'UntComponenteSwitch.pas' {ComponenteSwitch};
+  UntComponenteSwitch in 'UntComponenteSwitch.pas' {ComponenteSwitch},
+  UntComponenteRadio in 'UntComponenteRadio.pas' {ComponenteRadio};
 
 {$R *.res}
 
@@ -32,5 +33,6 @@ begin
   Application.CreateForm(TRadioModelo, RadioModelo);
   Application.CreateForm(TComponenteCamara, ComponenteCamara);
   Application.CreateForm(TComponenteSwitch, ComponenteSwitch);
+  Application.CreateForm(TComponenteRadio, ComponenteRadio);
   Application.Run;
 end.

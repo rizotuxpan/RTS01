@@ -102,6 +102,10 @@ object WndMainForm: TWndMainForm
         Caption = 'Switches'
         OnClick = MnuCompSwitchesClick
       end
+      object MnuCompRadios: TMenuItem
+        Caption = 'Radios'
+        OnClick = MnuCompRadiosClick
+      end
     end
   end
 end

@@ -1,11 +1,11 @@
-object ComponenteSwitch: TComponenteSwitch
+object ComponenteRadio: TComponenteRadio
   Left = 0
   Top = 0
   Align = alClient
   BorderStyle = bsNone
-  Caption = 'ComponenteSwitch'
-  ClientHeight = 551
-  ClientWidth = 806
+  Caption = 'ComponenteRadio'
+  ClientHeight = 520
+  ClientWidth = 840
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,16 +16,19 @@ object ComponenteSwitch: TComponenteSwitch
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 448
-    Height = 551
+    Width = 482
+    Height = 520
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
+    ExplicitTop = -31
+    ExplicitWidth = 448
+    ExplicitHeight = 551
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1
-      Width = 446
-      Height = 524
+      Width = 480
+      Height = 493
       Align = alClient
       DataSource = DataSource0
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -91,25 +94,30 @@ object ComponenteSwitch: TComponenteSwitch
     end
     object DBNavigator1: TDBNavigator
       Left = 1
-      Top = 525
-      Width = 446
+      Top = 494
+      Width = 480
       Height = 25
       DataSource = DataSource0
       VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
       Align = alBottom
       TabOrder = 1
+      ExplicitTop = 525
+      ExplicitWidth = 446
     end
   end
   object Panel2: TPanel
-    Left = 448
+    Left = 482
     Top = 0
     Width = 358
-    Height = 551
+    Height = 520
     Align = alRight
     TabOrder = 1
+    ExplicitLeft = 448
+    ExplicitTop = -31
+    ExplicitHeight = 551
     DesignSize = (
       358
-      551)
+      520)
     object Label1: TLabel
       Left = 22
       Top = 194
@@ -194,33 +202,36 @@ object ComponenteSwitch: TComponenteSwitch
     end
     object Button1: TButton
       Left = 16
-      Top = 500
+      Top = 469
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Nuevo'
       TabOrder = 2
       OnClick = Button1Click
+      ExplicitTop = 500
     end
     object Button2: TButton
       Left = 97
-      Top = 500
+      Top = 469
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Guardar'
       TabOrder = 3
       OnClick = Button2Click
+      ExplicitTop = 500
     end
     object Button3: TButton
       Left = 178
-      Top = 500
+      Top = 469
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Eliminar'
       TabOrder = 4
       OnClick = Button3Click
+      ExplicitTop = 500
     end
     object DBEdit3: TDBEdit
       Left = 304
@@ -233,13 +244,14 @@ object ComponenteSwitch: TComponenteSwitch
     end
     object Button4: TButton
       Left = 259
-      Top = 500
+      Top = 469
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Cerrar'
       TabOrder = 6
       OnClick = Button4Click
+      ExplicitTop = 500
     end
     object DBLookupComboBox2: TDBLookupComboBox
       Left = 88
@@ -299,83 +311,114 @@ object ComponenteSwitch: TComponenteSwitch
     Top = 320
   end
   object DataSource1: TDataSource
-    DataSet = Cat_switch_modeloTable
+    DataSet = Cat_radio_modeloTable
     Left = 296
     Top = 320
   end
   object DataSource0: TDataSource
-    DataSet = Cat_switchTable
+    DataSet = Cat_radioTable
     Left = 304
     Top = 384
   end
-  object Cat_switchTable: TFDQuery
+  object Cat_radioTable: TFDQuery
     Active = True
     Connection = RtsoftwareConnection
     SQL.Strings = (
-      'SELECT * FROM CAT_SWITCH ORDER BY FOLIO')
+      'SELECT * FROM CAT_RADIO ORDER BY FOLIO')
     Left = 187
-    Top = 387
-    object Cat_switchTableID: TIntegerField
+    Top = 388
+    object Cat_radioTableID: TIntegerField
       FieldName = 'ID'
       Origin = 'ID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object Cat_switchTableSERIE: TStringField
+    object Cat_radioTableSERIE: TStringField
       FieldName = 'SERIE'
       Origin = 'SERIE'
       Size = 30
     end
-    object Cat_switchTableFACTURA: TStringField
+    object Cat_radioTableFACTURA: TStringField
       FieldName = 'FACTURA'
       Origin = 'FACTURA'
     end
-    object Cat_switchTableIP: TStringField
+    object Cat_radioTableIP: TStringField
       FieldName = 'IP'
       Origin = 'IP'
       FixedChar = True
       Size = 15
     end
-    object Cat_switchTableNOMBRE: TStringField
+    object Cat_radioTableNOMBRE: TStringField
       FieldName = 'NOMBRE'
       Origin = 'NOMBRE'
     end
-    object Cat_switchTablePRECIO: TCurrencyField
+    object Cat_radioTablePRECIO: TCurrencyField
       FieldName = 'PRECIO'
       Origin = 'PRECIO'
     end
-    object Cat_switchTableFOLIO: TStringField
+    object Cat_radioTableFOLIO: TStringField
       FieldName = 'FOLIO'
       Origin = 'FOLIO'
       Size = 12
     end
-    object Cat_switchTableARTICULO: TWideStringField
+    object Cat_radioTableARTICULO: TWideStringField
       FieldName = 'ARTICULO'
       Origin = 'ARTICULO'
       Size = 240
     end
-    object Cat_switchTableDESCRIPCION: TWideStringField
+    object Cat_radioTableDESCRIPCION: TWideStringField
       FieldName = 'DESCRIPCION'
       Origin = 'DESCRIPCION'
       Required = True
       Size = 1020
     end
-    object Cat_switchTableFK_MODELO: TIntegerField
+    object Cat_radioTableFK_MODELO: TIntegerField
       FieldName = 'FK_MODELO'
       Origin = 'FK_MODELO'
     end
   end
-  object Cat_switch_modeloTable: TFDQuery
+  object Cat_radio_modeloTable: TFDQuery
     Active = True
     Connection = RtsoftwareConnection
     SQL.Strings = (
       
         'SELECT a.ID, a.CLAVE, a.DESCRIPCION, a.URL, b.DESCRIPCION AS MAR' +
         'CA '
-      'FROM CAT_SWITCH_MODELO a, CAT_SWITCH_MARCA b'
-      'WHERE a.FK_SWITCH_MARCA = b.ID  '
+      'FROM CAT_RADIO_MODELO a, CAT_RADIO_MARCA b'
+      'WHERE a.FK_RADIO_MARCA = b.ID  '
       'ORDER BY a.CLAVE')
-    Left = 190
-    Top = 319
+    Left = 186
+    Top = 318
+    object Cat_radio_modeloTableID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object Cat_radio_modeloTableCLAVE: TWideStringField
+      FieldName = 'CLAVE'
+      Origin = 'CLAVE'
+      Required = True
+      Size = 40
+    end
+    object Cat_radio_modeloTableDESCRIPCION: TWideStringField
+      FieldName = 'DESCRIPCION'
+      Origin = 'DESCRIPCION'
+      Required = True
+      Size = 1020
+    end
+    object Cat_radio_modeloTableURL: TWideStringField
+      FieldName = 'URL'
+      Origin = 'URL'
+      Size = 1020
+    end
+    object Cat_radio_modeloTableMARCA: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'MARCA'
+      Origin = 'DESCRIPCION'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 1020
+    end
   end
 end
