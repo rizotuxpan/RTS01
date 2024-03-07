@@ -18,9 +18,8 @@ object WndMainForm: TWndMainForm
     Width = 918
     Height = 19
     Panels = <>
-    ExplicitLeft = 8
-    ExplicitTop = 381
-    ExplicitWidth = 816
+    ExplicitTop = 535
+    ExplicitWidth = 916
   end
   object ToolBar1: TToolBar
     Left = 0
@@ -29,7 +28,7 @@ object WndMainForm: TWndMainForm
     Height = 29
     Caption = 'ToolBar1'
     TabOrder = 1
-    ExplicitWidth = 816
+    ExplicitWidth = 916
   end
   object PanelMainWindow: TPanel
     Left = 0
@@ -41,8 +40,8 @@ object WndMainForm: TWndMainForm
     Color = clAppWorkSpace
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 816
-    ExplicitHeight = 346
+    ExplicitWidth = 916
+    ExplicitHeight = 506
   end
   object AppMenu: TMainMenu
     Left = 856

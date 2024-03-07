@@ -20,7 +20,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  TStyleManager.TrySetStyle('Aqua Light Slate');
+  TStyleManager.TrySetStyle('Windows10 SlateGray');
   Application.CreateForm(TWndMainForm, WndMainForm);
   Application.CreateForm(TDMMainForm, DMMainForm);
   Application.CreateForm(TCamaraTipo, CamaraTipo);

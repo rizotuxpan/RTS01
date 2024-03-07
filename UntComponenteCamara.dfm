@@ -21,8 +21,6 @@ object ComponenteCamara: TComponenteCamara
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
-    ExplicitWidth = 414
-    ExplicitHeight = 458
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1
@@ -40,7 +38,7 @@ object ComponenteCamara: TComponenteCamara
       Columns = <
         item
           Expanded = False
-          FieldName = 'NOMBRE'
+          FieldName = 'FOLIO'
           Visible = True
         end
         item
@@ -51,7 +49,7 @@ object ComponenteCamara: TComponenteCamara
         item
           Expanded = False
           FieldName = 'SERIE'
-          Visible = True
+          Visible = False
         end
         item
           Expanded = False
@@ -71,6 +69,23 @@ object ComponenteCamara: TComponenteCamara
         item
           Expanded = False
           FieldName = 'IP'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMBRE'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ARTICULO'
+          Width = 300
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DESCRIPCION'
+          Width = 750
           Visible = True
         end>
     end
@@ -83,8 +98,6 @@ object ComponenteCamara: TComponenteCamara
       VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
       Align = alBottom
       TabOrder = 1
-      ExplicitTop = 432
-      ExplicitWidth = 412
     end
   end
   object Panel2: TPanel
@@ -94,14 +107,12 @@ object ComponenteCamara: TComponenteCamara
     Height = 524
     Align = alRight
     TabOrder = 1
-    ExplicitLeft = 414
-    ExplicitHeight = 458
     DesignSize = (
       358
       524)
     object Label1: TLabel
       Left = 22
-      Top = 61
+      Top = 194
       Width = 25
       Height = 15
       Caption = 'Serie'
@@ -115,61 +126,82 @@ object ComponenteCamara: TComponenteCamara
     end
     object Label4: TLabel
       Left = 22
-      Top = 90
+      Top = 223
       Width = 10
       Height = 15
       Caption = 'IP'
     end
     object Label5: TLabel
       Left = 22
-      Top = 124
+      Top = 257
       Width = 41
       Height = 15
       Caption = 'Modelo'
     end
     object Label2: TLabel
       Left = 22
-      Top = 153
+      Top = 286
       Width = 33
       Height = 15
       Caption = 'Marca'
     end
     object Label6: TLabel
       Left = 22
-      Top = 182
+      Top = 315
       Width = 23
       Height = 15
       Caption = 'Tipo'
     end
     object DBText1: TDBText
-      Left = 72
-      Top = 153
+      Left = 88
+      Top = 286
       Width = 257
       Height = 17
       DataField = 'MARCA'
       DataSource = DataSource1
     end
     object DBText2: TDBText
-      Left = 72
-      Top = 182
+      Left = 88
+      Top = 315
       Width = 257
       Height = 17
       DataField = 'TIPO'
       DataSource = DataSource1
     end
+    object Label7: TLabel
+      Left = 22
+      Top = 61
+      Width = 26
+      Height = 15
+      Caption = 'Folio'
+    end
+    object Label8: TLabel
+      Left = 22
+      Top = 90
+      Width = 42
+      Height = 15
+      Caption = 'Art'#237'culo'
+    end
+    object Label9: TLabel
+      Left = 22
+      Top = 119
+      Width = 62
+      Height = 15
+      Caption = 'Descripci'#243'n'
+    end
     object DBEdit1: TDBEdit
-      Left = 72
-      Top = 58
-      Width = 127
+      Left = 88
+      Top = 191
+      Width = 129
       Height = 23
       DataField = 'SERIE'
       DataSource = DataSource0
       TabOrder = 0
     end
     object DBEdit2: TDBEdit
-      Left = 72
+      Left = 88
       Top = 29
-      Width = 257
+      Width = 129
       Height = 23
       DataField = 'NOMBRE'
       DataSource = DataSource0
@@ -225,8 +257,8 @@ object ComponenteCamara: TComponenteCamara
       OnClick = Button4Click
     end
     object DBLookupComboBox2: TDBLookupComboBox
-      Left = 72
-      Top = 116
+      Left = 88
+      Top = 249
       Width = 259
       Height = 23
       DataField = 'FK_MODELO'
@@ -237,13 +269,40 @@ object ComponenteCamara: TComponenteCamara
       TabOrder = 7
     end
     object DBEdit7: TDBEdit
-      Left = 72
-      Top = 87
+      Left = 88
+      Top = 220
       Width = 129
       Height = 23
       DataField = 'IP'
       DataSource = DataSource0
       TabOrder = 8
+    end
+    object DBEdit4: TDBEdit
+      Left = 88
+      Top = 58
+      Width = 129
+      Height = 23
+      DataField = 'FOLIO'
+      DataSource = DataSource0
+      TabOrder = 9
+    end
+    object DBEdit5: TDBEdit
+      Left = 88
+      Top = 87
+      Width = 257
+      Height = 23
+      DataField = 'ARTICULO'
+      DataSource = DataSource0
+      TabOrder = 10
+    end
+    object DBMemo1: TDBMemo
+      Left = 90
+      Top = 116
+      Width = 255
+      Height = 69
+      DataField = 'DESCRIPCION'
+      DataSource = DataSource0
+      TabOrder = 11
     end
   end
   object RtsoftwareConnection: TFDConnection
@@ -325,10 +384,9 @@ object ComponenteCamara: TComponenteCamara
     end
   end
   object Cat_camaraTable: TFDQuery
-    Active = True
     Connection = RtsoftwareConnection
     SQL.Strings = (
-      'SELECT * FROM CAT_CAMARA')
+      'SELECT * FROM CAT_CAMARA ORDER BY FOLIO')
     Left = 188
     Top = 383
     object Cat_camaraTableID: TIntegerField
@@ -363,6 +421,22 @@ object ComponenteCamara: TComponenteCamara
     object Cat_camaraTableNOMBRE: TStringField
       FieldName = 'NOMBRE'
       Origin = 'NOMBRE'
+    end
+    object Cat_camaraTableFOLIO: TStringField
+      FieldName = 'FOLIO'
+      Origin = 'FOLIO'
+      Size = 12
+    end
+    object Cat_camaraTableARTICULO: TWideStringField
+      FieldName = 'ARTICULO'
+      Origin = 'ARTICULO'
+      Size = 240
+    end
+    object Cat_camaraTableDESCRIPCION: TWideStringField
+      FieldName = 'DESCRIPCION'
+      Origin = 'DESCRIPCION'
+      Required = True
+      Size = 1020
     end
   end
   object DataSource0: TDataSource

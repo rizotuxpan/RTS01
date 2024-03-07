@@ -56,6 +56,15 @@ type
     Cat_camara_modeloTableRESH: TSmallintField;
     Cat_camara_modeloTableMARCA: TWideStringField;
     Cat_camara_modeloTableTIPO: TWideStringField;
+    Cat_camaraTableFOLIO: TStringField;
+    DBEdit4: TDBEdit;
+    Label7: TLabel;
+    Label8: TLabel;
+    DBEdit5: TDBEdit;
+    Label9: TLabel;
+    Cat_camaraTableARTICULO: TWideStringField;
+    Cat_camaraTableDESCRIPCION: TWideStringField;
+    DBMemo1: TDBMemo;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
