@@ -15,7 +15,8 @@ uses
   UntRadioModelo in 'UntRadioModelo.pas' {RadioModelo},
   UntComponenteCamara in 'UntComponenteCamara.pas' {ComponenteCamara},
   UntComponenteSwitch in 'UntComponenteSwitch.pas' {ComponenteSwitch},
-  UntComponenteRadio in 'UntComponenteRadio.pas' {ComponenteRadio};
+  UntComponenteRadio in 'UntComponenteRadio.pas' {ComponenteRadio},
+  UntGabinete in 'UntGabinete.pas' {Gabinete};
 
 {$R *.res}
 
@@ -34,5 +35,6 @@ begin
   Application.CreateForm(TComponenteCamara, ComponenteCamara);
   Application.CreateForm(TComponenteSwitch, ComponenteSwitch);
   Application.CreateForm(TComponenteRadio, ComponenteRadio);
+  Application.CreateForm(TGabinete, Gabinete);
   Application.Run;
 end.

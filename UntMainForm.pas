@@ -30,6 +30,7 @@ type
     MnuCompCamaras: TMenuItem;
     MnuCompSwitches: TMenuItem;
     MnuCompRadios: TMenuItem;
+    Gabinetes1: TMenuItem;
     procedure MnuCatCamMarcasClick(Sender: TObject);
     procedure MnuCatCamTiposClick(Sender: TObject);
     procedure MnuCatCamModelosClick(Sender: TObject);
@@ -40,6 +41,7 @@ type
     procedure MnuCompCamarasClick(Sender: TObject);
     procedure MnuCompSwitchesClick(Sender: TObject);
     procedure MnuCompRadiosClick(Sender: TObject);
+    procedure Gabinetes1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -55,7 +57,7 @@ implementation
 
 uses UntCamaraMarca, untCamaraTipo, UntCamaraModelo, UntSwitchMarca,
   UntSwitchModelo, UntRadioMarca, UntRadioModelo, UntComponenteCamara,
-  UntComponenteSwitch, UntComponenteRadio;
+  UntComponenteSwitch, UntComponenteRadio, UntGabinete;
 
 
 procedure TWndMainForm.CatRadMarcasClick(Sender: TObject);
@@ -72,6 +74,15 @@ var
   wnd: TRadioModelo;
 begin
   wnd := TRadioModelo.Create(Self);
+  wnd.Parent := WndMainForm;
+  wnd.Visible := True;
+end;
+
+procedure TWndMainForm.Gabinetes1Click(Sender: TObject);
+var
+  wnd: TGabinete;
+begin
+  wnd := TGabinete.Create(Self);
   wnd.Parent := WndMainForm;
   wnd.Visible := True;
 end;

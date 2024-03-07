@@ -150,6 +150,10 @@
             <Form>ComponenteRadio</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UntGabinete.pas">
+            <Form>Gabinete</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

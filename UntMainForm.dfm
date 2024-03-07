@@ -91,6 +91,10 @@ object WndMainForm: TWndMainForm
           OnClick = CatRadModelosClick
         end
       end
+      object Gabinetes1: TMenuItem
+        Caption = 'Gabinetes'
+        OnClick = Gabinetes1Click
+      end
     end
     object MnuComp: TMenuItem
       Caption = 'Componentes'
