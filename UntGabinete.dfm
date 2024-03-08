@@ -25,7 +25,7 @@ object Gabinete: TGabinete
       Left = 1
       Top = 1
       Width = 432
-      Height = 477
+      Height = 277
       Align = alClient
       DataSource = DataSource0
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -101,6 +101,78 @@ object Gabinete: TGabinete
       Align = alBottom
       TabOrder = 1
     end
+    object DBGrid3: TDBGrid
+      Left = 1
+      Top = 278
+      Width = 432
+      Height = 200
+      Align = alBottom
+      DataSource = DataSource0
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+      TabOrder = 2
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -12
+      TitleFont.Name = 'Segoe UI'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'FOLIO'
+          Width = 80
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CLAVE'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ID'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'SERIE'
+          Width = -1
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'PRECIO'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'FACTURA'
+          Width = -1
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'FK_MODELO'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'IP'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'ARTICULO'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DESCRIPCION'
+          Width = 750
+          Visible = True
+        end>
+    end
   end
   object Panel2: TPanel
     Left = 434
@@ -109,6 +181,8 @@ object Gabinete: TGabinete
     Height = 504
     Align = alRight
     TabOrder = 1
+    ExplicitLeft = 226
+    ExplicitTop = -26
     DesignSize = (
       358
       504)
@@ -249,12 +323,12 @@ object Gabinete: TGabinete
       Anchors = [akLeft, akRight, akBottom]
       Caption = 'Switches'
       TabOrder = 10
-      object Label3: TLabel
+      object lblFolio: TLabel
         Left = 16
-        Top = 28
-        Width = 29
-        Height = 15
-        Caption = 'Clave'
+        Top = 22
+        Width = 26
+        Height = 25
+        Caption = 'Folio'
       end
       object DBGrid2: TDBGrid
         Left = 2
@@ -270,25 +344,32 @@ object Gabinete: TGabinete
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
       end
-      object DBNavigator2: TDBNavigator
-        Left = 218
-        Top = 24
-        Width = 93
-        Height = 23
-        DataSource = DataSource1
-        VisibleButtons = [nbInsert, nbDelete, nbPost]
+      object btnAgregaSwitch: TButton
+        Left = 196
+        Top = 22
+        Width = 62
+        Height = 25
+        Caption = 'Agrega'
         TabOrder = 1
+        OnClick = btnAgregaSwitchClick
       end
-      object DBLookupComboBox1: TDBLookupComboBox
-        Left = 72
-        Top = 24
-        Width = 140
-        Height = 23
-        DataField = 'FK_SWITCH'
-        DataSource = DataSource1
-        ListField = 'FOLIO'
-        ListSource = DataSource2
+      object Button6: TButton
+        Left = 264
+        Top = 22
+        Width = 54
+        Height = 25
+        Caption = 'Quita'
         TabOrder = 2
+      end
+      object Edit1: TEdit
+        Left = 74
+        Top = 22
+        Width = 116
+        Height = 23
+        CharCase = ecUpperCase
+        MaxLength = 12
+        TabOrder = 3
+        Text = 'CCCC'
       end
     end
   end
@@ -359,61 +440,73 @@ object Gabinete: TGabinete
       Size = 1020
     end
   end
-  object Gabinete_switchTable: TFDQuery
+  object FDQuery1: TFDQuery
     Active = True
     Connection = RtsoftwareConnection
     SQL.Strings = (
-      
-        'SELECT a.FK_GABINETE, a.FK_SWITCH, b.FOLIO AS GABINETE, c.FOLIO ' +
-        'AS SWITCH '
-      'FROM GABINETE_SWITCH a, CAT_GABINETE b, CAT_SWITCH c'
-      'WHERE a.FK_GABINETE=b.ID AND a.FK_SWITCH=c.ID')
-    Left = 681
-    Top = 181
-    object Gabinete_switchTableFK_GABINETE: TIntegerField
-      FieldName = 'FK_GABINETE'
-      Origin = 'FK_GABINETE'
-      Visible = False
+      'SELECT * FROM CAT_SWITCH WHERE FOLIO = :pFOLIO')
+    Left = 578
+    Top = 400
+    ParamData = <
+      item
+        Name = 'PFOLIO'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
+      end>
+    object FDQuery1ID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
-    object Gabinete_switchTableFK_SWITCH: TIntegerField
-      FieldName = 'FK_SWITCH'
-      Origin = 'FK_SWITCH'
-      Visible = False
+    object FDQuery1SERIE: TStringField
+      FieldName = 'SERIE'
+      Origin = 'SERIE'
+      Size = 30
     end
-    object Gabinete_switchTableGABINETE: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'GABINETE'
+    object FDQuery1FACTURA: TStringField
+      FieldName = 'FACTURA'
+      Origin = 'FACTURA'
+    end
+    object FDQuery1IP: TStringField
+      FieldName = 'IP'
+      Origin = 'IP'
+      FixedChar = True
+      Size = 15
+    end
+    object FDQuery1NOMBRE: TStringField
+      FieldName = 'NOMBRE'
+      Origin = 'NOMBRE'
+    end
+    object FDQuery1PRECIO: TCurrencyField
+      FieldName = 'PRECIO'
+      Origin = 'PRECIO'
+    end
+    object FDQuery1FOLIO: TStringField
+      FieldName = 'FOLIO'
       Origin = 'FOLIO'
-      ProviderFlags = []
-      ReadOnly = True
-      Visible = False
       Size = 12
     end
-    object Gabinete_switchTableSWITCH: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'SWITCH'
-      Origin = 'FOLIO'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 12
+    object FDQuery1ARTICULO: TWideStringField
+      FieldName = 'ARTICULO'
+      Origin = 'ARTICULO'
+      Size = 240
+    end
+    object FDQuery1DESCRIPCION: TWideStringField
+      FieldName = 'DESCRIPCION'
+      Origin = 'DESCRIPCION'
+      Required = True
+      Size = 1020
+    end
+    object FDQuery1FK_MODELO: TIntegerField
+      FieldName = 'FK_MODELO'
+      Origin = 'FK_MODELO'
     end
   end
   object DataSource1: TDataSource
-    DataSet = Gabinete_switchTable
-    Left = 730
-    Top = 184
-  end
-  object Cat_switchTable: TFDQuery
-    Active = True
-    Connection = RtsoftwareConnection
-    SQL.Strings = (
-      'SELECT * FROM CAT_SWITCH')
-    Left = 505
-    Top = 180
-  end
-  object DataSource2: TDataSource
-    DataSet = Cat_switchTable
-    Left = 594
-    Top = 184
+    DataSet = FDQuery1
+    Left = 656
+    Top = 400
   end
 end

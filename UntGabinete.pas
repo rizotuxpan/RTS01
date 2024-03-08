@@ -47,21 +47,28 @@ type
     DBEdit6: TDBEdit;
     GroupBox1: TGroupBox;
     DBGrid2: TDBGrid;
-    Label3: TLabel;
-    DBNavigator2: TDBNavigator;
-    Gabinete_switchTable: TFDQuery;
+    lblFolio: TLabel;
+    btnAgregaSwitch: TButton;
+    Button6: TButton;
+    Edit1: TEdit;
+    FDQuery1: TFDQuery;
+    FDQuery1ID: TIntegerField;
+    FDQuery1SERIE: TStringField;
+    FDQuery1FACTURA: TStringField;
+    FDQuery1IP: TStringField;
+    FDQuery1NOMBRE: TStringField;
+    FDQuery1PRECIO: TCurrencyField;
+    FDQuery1FOLIO: TStringField;
+    FDQuery1ARTICULO: TWideStringField;
+    FDQuery1DESCRIPCION: TWideStringField;
+    FDQuery1FK_MODELO: TIntegerField;
     DataSource1: TDataSource;
-    Gabinete_switchTableFK_GABINETE: TIntegerField;
-    Gabinete_switchTableFK_SWITCH: TIntegerField;
-    Gabinete_switchTableGABINETE: TStringField;
-    Gabinete_switchTableSWITCH: TStringField;
-    DBLookupComboBox1: TDBLookupComboBox;
-    Cat_switchTable: TFDQuery;
-    DataSource2: TDataSource;
+    DBGrid3: TDBGrid;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure btnAgregaSwitchClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -74,6 +81,20 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TGabinete.btnAgregaSwitchClick(Sender: TObject);
+var
+  Filtro: string;
+begin
+  Filtro := Edit1.Text;
+
+  FDQuery1.SQL.Text := 'SELECT * FROM CAT_SWITCH WHERE FOLIO = :pFOLIO';
+  FDQuery1.Params.ParamByName('pFOLIO').Value := Filtro;
+
+  //Ejecutar la consulta
+  FDQuery1.Close;
+  FDQuery1.Open;
+end;
 
 procedure TGabinete.Button1Click(Sender: TObject);
 begin
