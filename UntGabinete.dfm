@@ -158,30 +158,30 @@ object Gabinete: TGabinete
     end
     object Button1: TButton
       Left = 16
-      Top = 453
+      Top = 217
       Width = 75
       Height = 25
-      Anchors = [akRight, akBottom]
+      Anchors = [akTop, akRight]
       Caption = 'Nuevo'
       TabOrder = 1
       OnClick = Button1Click
     end
     object Button2: TButton
       Left = 97
-      Top = 453
+      Top = 217
       Width = 75
       Height = 25
-      Anchors = [akRight, akBottom]
+      Anchors = [akTop, akRight]
       Caption = 'Guardar'
       TabOrder = 2
       OnClick = Button2Click
     end
     object Button3: TButton
       Left = 178
-      Top = 453
+      Top = 217
       Width = 75
       Height = 25
-      Anchors = [akRight, akBottom]
+      Anchors = [akTop, akRight]
       Caption = 'Eliminar'
       TabOrder = 3
       OnClick = Button3Click
@@ -197,10 +197,10 @@ object Gabinete: TGabinete
     end
     object Button4: TButton
       Left = 259
-      Top = 453
+      Top = 217
       Width = 75
       Height = 25
-      Anchors = [akRight, akBottom]
+      Anchors = [akTop, akRight]
       Caption = 'Cerrar'
       TabOrder = 5
       OnClick = Button4Click
@@ -241,17 +241,55 @@ object Gabinete: TGabinete
       DataSource = DataSource0
       TabOrder = 9
     end
-    object DBGrid2: TDBGrid
+    object GroupBox1: TGroupBox
       Left = 16
-      Top = 288
-      Width = 320
-      Height = 136
+      Top = 272
+      Width = 329
+      Height = 215
+      Anchors = [akLeft, akRight, akBottom]
+      Caption = 'Switches'
       TabOrder = 10
-      TitleFont.Charset = DEFAULT_CHARSET
-      TitleFont.Color = clWindowText
-      TitleFont.Height = -12
-      TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
+      object Label3: TLabel
+        Left = 16
+        Top = 28
+        Width = 29
+        Height = 15
+        Caption = 'Clave'
+      end
+      object DBGrid2: TDBGrid
+        Left = 2
+        Top = 53
+        Width = 325
+        Height = 160
+        Align = alBottom
+        DataSource = DataSource1
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -12
+        TitleFont.Name = 'Segoe UI'
+        TitleFont.Style = []
+      end
+      object DBNavigator2: TDBNavigator
+        Left = 218
+        Top = 24
+        Width = 93
+        Height = 23
+        DataSource = DataSource1
+        VisibleButtons = [nbInsert, nbDelete, nbPost]
+        TabOrder = 1
+      end
+      object DBLookupComboBox1: TDBLookupComboBox
+        Left = 72
+        Top = 24
+        Width = 140
+        Height = 23
+        DataField = 'FK_SWITCH'
+        DataSource = DataSource1
+        ListField = 'FOLIO'
+        ListSource = DataSource2
+        TabOrder = 2
+      end
     end
   end
   object RtsoftwareConnection: TFDConnection
@@ -320,5 +358,62 @@ object Gabinete: TGabinete
       Origin = 'URL'
       Size = 1020
     end
+  end
+  object Gabinete_switchTable: TFDQuery
+    Active = True
+    Connection = RtsoftwareConnection
+    SQL.Strings = (
+      
+        'SELECT a.FK_GABINETE, a.FK_SWITCH, b.FOLIO AS GABINETE, c.FOLIO ' +
+        'AS SWITCH '
+      'FROM GABINETE_SWITCH a, CAT_GABINETE b, CAT_SWITCH c'
+      'WHERE a.FK_GABINETE=b.ID AND a.FK_SWITCH=c.ID')
+    Left = 681
+    Top = 181
+    object Gabinete_switchTableFK_GABINETE: TIntegerField
+      FieldName = 'FK_GABINETE'
+      Origin = 'FK_GABINETE'
+      Visible = False
+    end
+    object Gabinete_switchTableFK_SWITCH: TIntegerField
+      FieldName = 'FK_SWITCH'
+      Origin = 'FK_SWITCH'
+      Visible = False
+    end
+    object Gabinete_switchTableGABINETE: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'GABINETE'
+      Origin = 'FOLIO'
+      ProviderFlags = []
+      ReadOnly = True
+      Visible = False
+      Size = 12
+    end
+    object Gabinete_switchTableSWITCH: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'SWITCH'
+      Origin = 'FOLIO'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 12
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = Gabinete_switchTable
+    Left = 730
+    Top = 184
+  end
+  object Cat_switchTable: TFDQuery
+    Active = True
+    Connection = RtsoftwareConnection
+    SQL.Strings = (
+      'SELECT * FROM CAT_SWITCH')
+    Left = 505
+    Top = 180
+  end
+  object DataSource2: TDataSource
+    DataSet = Cat_switchTable
+    Left = 594
+    Top = 184
   end
 end

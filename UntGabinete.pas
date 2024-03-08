@@ -10,7 +10,7 @@ uses
   FireDAC.Phys.IB, FireDAC.Phys.IBDef, FireDAC.VCLUI.Wait, FireDAC.Stan.Param,
   FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet,
   FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.DBCtrls, Vcl.Mask, Vcl.ExtCtrls,
-  Vcl.Grids, Vcl.DBGrids;
+  Vcl.Grids, Vcl.DBGrids, Vcl.Buttons;
 
 type
   TGabinete = class(TForm)
@@ -45,7 +45,19 @@ type
     Cat_gabineteTableURL: TWideStringField;
     Label2: TLabel;
     DBEdit6: TDBEdit;
+    GroupBox1: TGroupBox;
     DBGrid2: TDBGrid;
+    Label3: TLabel;
+    DBNavigator2: TDBNavigator;
+    Gabinete_switchTable: TFDQuery;
+    DataSource1: TDataSource;
+    Gabinete_switchTableFK_GABINETE: TIntegerField;
+    Gabinete_switchTableFK_SWITCH: TIntegerField;
+    Gabinete_switchTableGABINETE: TStringField;
+    Gabinete_switchTableSWITCH: TStringField;
+    DBLookupComboBox1: TDBLookupComboBox;
+    Cat_switchTable: TFDQuery;
+    DataSource2: TDataSource;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
