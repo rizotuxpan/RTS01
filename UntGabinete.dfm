@@ -107,7 +107,7 @@ object Gabinete: TGabinete
       Width = 432
       Height = 200
       Align = alBottom
-      DataSource = DataSource0
+      DataSource = DataSource2
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
       TabOrder = 2
       TitleFont.Charset = DEFAULT_CHARSET
@@ -125,7 +125,6 @@ object Gabinete: TGabinete
         item
           Expanded = False
           FieldName = 'CLAVE'
-          Width = 64
           Visible = True
         end
         item
@@ -136,7 +135,6 @@ object Gabinete: TGabinete
         item
           Expanded = False
           FieldName = 'SERIE'
-          Width = -1
           Visible = False
         end
         item
@@ -147,7 +145,6 @@ object Gabinete: TGabinete
         item
           Expanded = False
           FieldName = 'FACTURA'
-          Width = -1
           Visible = False
         end
         item
@@ -163,7 +160,6 @@ object Gabinete: TGabinete
         item
           Expanded = False
           FieldName = 'ARTICULO'
-          Width = 64
           Visible = True
         end
         item
@@ -181,8 +177,6 @@ object Gabinete: TGabinete
     Height = 504
     Align = alRight
     TabOrder = 1
-    ExplicitLeft = 226
-    ExplicitTop = -26
     DesignSize = (
       358
       504)
@@ -327,7 +321,7 @@ object Gabinete: TGabinete
         Left = 16
         Top = 22
         Width = 26
-        Height = 25
+        Height = 15
         Caption = 'Folio'
       end
       object DBGrid2: TDBGrid
@@ -378,13 +372,13 @@ object Gabinete: TGabinete
       'ConnectionDef=RTSoftware')
     Connected = True
     LoginPrompt = False
-    Left = 72
-    Top = 320
+    Left = 56
+    Top = 80
   end
   object DataSource0: TDataSource
     DataSet = Cat_gabineteTable
     Left = 280
-    Top = 320
+    Top = 152
   end
   object Cat_gabineteTable: TFDQuery
     Active = True
@@ -392,7 +386,7 @@ object Gabinete: TGabinete
     SQL.Strings = (
       'SELECT * FROM CAT_GABINETE ORDER BY FOLIO')
     Left = 185
-    Top = 319
+    Top = 151
     object Cat_gabineteTableID: TIntegerField
       FieldName = 'ID'
       Origin = 'ID'
@@ -508,5 +502,21 @@ object Gabinete: TGabinete
     DataSet = FDQuery1
     Left = 656
     Top = 400
+  end
+  object Cat_switchTable: TFDQuery
+    Active = True
+    MasterSource = DataSource0
+    MasterFields = 'CLAVE;ARTICULO;DESCRIPCION;FOLIO;SERIE'
+    DetailFields = 'ID'
+    Connection = RtsoftwareConnection
+    SQL.Strings = (
+      'SELECT * FROM CAT_SWITCH')
+    Left = 179
+    Top = 373
+  end
+  object DataSource2: TDataSource
+    DataSet = Cat_switchTable
+    Left = 288
+    Top = 376
   end
 end

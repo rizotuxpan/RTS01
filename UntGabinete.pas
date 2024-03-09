@@ -64,6 +64,8 @@ type
     FDQuery1FK_MODELO: TIntegerField;
     DataSource1: TDataSource;
     DBGrid3: TDBGrid;
+    Cat_switchTable: TFDQuery;
+    DataSource2: TDataSource;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
