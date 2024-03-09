@@ -3,7 +3,8 @@ unit UntSwitchMarca;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
@@ -55,21 +56,21 @@ implementation
 
 procedure TSwitchMarca.Button1Click(Sender: TObject);
 begin
-  Cat_Switch_MarcaTable.Insert;
+  Cat_switch_marcaTable.Insert;
   DBEdit3.Text := '0';
 end;
 
 procedure TSwitchMarca.Button2Click(Sender: TObject);
 begin
-  Cat_Switch_MarcaTable.Edit;
-  Cat_Switch_MarcaTable.Post;
-  Cat_Switch_MarcaTable.Refresh;
+  Cat_switch_marcaTable.Edit;
+  Cat_switch_marcaTable.Post;
+  Cat_switch_marcaTable.Refresh;
 end;
 
 procedure TSwitchMarca.Button3Click(Sender: TObject);
 begin
-  Cat_Switch_MarcaTable.Edit;
-  Cat_Switch_MarcaTable.Delete;
+  Cat_switch_marcaTable.Edit;
+  Cat_switch_marcaTable.Delete;
 end;
 
 procedure TSwitchMarca.Button4Click(Sender: TObject);

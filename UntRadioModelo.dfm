@@ -83,9 +83,6 @@ object RadioModelo: TRadioModelo
     Height = 476
     Align = alRight
     TabOrder = 1
-    ExplicitLeft = 349
-    ExplicitTop = -98
-    ExplicitHeight = 470
     DesignSize = (
       358
       476)

@@ -3,7 +3,8 @@ unit UntCamaraModelo;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
@@ -79,21 +80,21 @@ implementation
 
 procedure TCamaraModelo.Button1Click(Sender: TObject);
 begin
-  Cat_Camara_ModeloTable.Insert;
+  Cat_camara_modeloTable.Insert;
   DBEdit3.Text := '0';
 end;
 
 procedure TCamaraModelo.Button2Click(Sender: TObject);
 begin
-  Cat_Camara_ModeloTable.Edit;
-  Cat_Camara_ModeloTable.Post;
-  Cat_Camara_ModeloTable.Refresh;
+  Cat_camara_modeloTable.Edit;
+  Cat_camara_modeloTable.Post;
+  Cat_camara_modeloTable.Refresh;
 end;
 
 procedure TCamaraModelo.Button3Click(Sender: TObject);
 begin
-  Cat_Camara_ModeloTable.Edit;
-  Cat_Camara_ModeloTable.Delete;
+  Cat_camara_modeloTable.Edit;
+  Cat_camara_modeloTable.Delete;
 end;
 
 procedure TCamaraModelo.Button4Click(Sender: TObject);

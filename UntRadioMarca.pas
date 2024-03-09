@@ -3,7 +3,8 @@ unit UntRadioMarca;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
@@ -51,21 +52,21 @@ implementation
 
 procedure TRadioMarca.Button1Click(Sender: TObject);
 begin
-  Cat_Radio_MarcaTable.Insert;
+  Cat_radio_marcaTable.Insert;
   DBEdit3.Text := '0';
 end;
 
 procedure TRadioMarca.Button2Click(Sender: TObject);
 begin
-  Cat_Radio_MarcaTable.Edit;
-  Cat_Radio_MarcaTable.Post;
-  Cat_Radio_MarcaTable.Refresh;
+  Cat_radio_marcaTable.Edit;
+  Cat_radio_marcaTable.Post;
+  Cat_radio_marcaTable.Refresh;
 end;
 
 procedure TRadioMarca.Button3Click(Sender: TObject);
 begin
-  Cat_Radio_MarcaTable.Edit;
-  Cat_Radio_MarcaTable.Delete;
+  Cat_radio_marcaTable.Edit;
+  Cat_radio_marcaTable.Delete;
 end;
 
 procedure TRadioMarca.Button4Click(Sender: TObject);

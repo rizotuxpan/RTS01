@@ -2,8 +2,8 @@ object WndMainForm: TWndMainForm
   Left = 0
   Top = 0
   Caption = 'RTSoftware Videovigilancia'
-  ClientHeight = 558
-  ClientWidth = 918
+  ClientHeight = 504
+  ClientWidth = 914
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,34 +14,52 @@ object WndMainForm: TWndMainForm
   TextHeight = 15
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 539
-    Width = 918
+    Top = 485
+    Width = 914
     Height = 19
     Panels = <>
-    ExplicitTop = 538
-    ExplicitWidth = 914
+    ExplicitTop = 484
+    ExplicitWidth = 910
   end
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 918
+    Width = 914
     Height = 29
     Caption = 'ToolBar1'
     TabOrder = 1
-    ExplicitWidth = 914
+    ExplicitWidth = 910
+    object ToolButton1: TToolButton
+      Left = 0
+      Top = 0
+      Caption = 'C'#225'maras'
+      MenuItem = MnuCompCamaras
+    end
+    object ToolButton2: TToolButton
+      Left = 23
+      Top = 0
+      Caption = 'Radios'
+      MenuItem = MnuCompRadios
+    end
+    object ToolButton3: TToolButton
+      Left = 46
+      Top = 0
+      Caption = 'Switches'
+      MenuItem = MnuCompSwitches
+    end
   end
   object PanelMainWindow: TPanel
     Left = 0
     Top = 29
-    Width = 918
-    Height = 510
+    Width = 914
+    Height = 456
     Align = alClient
     Caption = 'RTSoftware Videovigilancia para Windows versi'#243'n 1.0'
     Color = clAppWorkSpace
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 914
-    ExplicitHeight = 509
+    ExplicitWidth = 910
+    ExplicitHeight = 455
   end
   object AppMenu: TMainMenu
     Left = 856
@@ -109,6 +127,40 @@ object WndMainForm: TWndMainForm
       object MnuCompRadios: TMenuItem
         Caption = 'Radios'
         OnClick = MnuCompRadiosClick
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object MnuCompGabinetes: TMenuItem
+        Caption = 'Gabinetes'
+        object MnuCompGabSwitches: TMenuItem
+          Caption = 'Switches'
+          OnClick = MnuCompGabSwitchesClick
+        end
+      end
+      object MnuCompPmi: TMenuItem
+        Caption = 'PMI'
+        object MnuCompPmiCamaras: TMenuItem
+          Caption = 'C'#225'maras'
+        end
+        object MnuCompPmiGabinetes: TMenuItem
+          Caption = 'Gabinetes'
+        end
+        object MnuCompPmiRadios: TMenuItem
+          Caption = 'Radios'
+        end
+      end
+      object MnuCompArcos: TMenuItem
+        Caption = 'Arcos'
+        object MnuCompArcCamaras: TMenuItem
+          Caption = 'C'#225'maras'
+        end
+        object MnuCompArcGabinetes: TMenuItem
+          Caption = 'Gabinetes'
+        end
+        object MnuCompArcRadios: TMenuItem
+          Caption = 'Radios'
+        end
       end
     end
   end

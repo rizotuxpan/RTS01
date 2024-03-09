@@ -76,8 +76,6 @@ object CamaraTipo: TCamaraTipo
     Height = 482
     Align = alRight
     TabOrder = 1
-    ExplicitLeft = 381
-    ExplicitHeight = 417
     DesignSize = (
       358
       482)

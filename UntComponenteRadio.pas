@@ -3,7 +3,8 @@ unit UntComponenteRadio;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
@@ -78,21 +79,21 @@ implementation
 
 procedure TComponenteRadio.Button1Click(Sender: TObject);
 begin
-  Cat_RadioTable.Insert;
+  Cat_radioTable.Insert;
   DBEdit3.Text := '0';
 end;
 
 procedure TComponenteRadio.Button2Click(Sender: TObject);
 begin
-  Cat_RadioTable.Edit;
-  Cat_RadioTable.Post;
-  Cat_RadioTable.Refresh;
+  Cat_radioTable.Edit;
+  Cat_radioTable.Post;
+  Cat_radioTable.Refresh;
 end;
 
 procedure TComponenteRadio.Button3Click(Sender: TObject);
 begin
-  Cat_RadioTable.Edit;
-  Cat_RadioTable.Delete;
+  Cat_radioTable.Edit;
+  Cat_radioTable.Delete;
 end;
 
 procedure TComponenteRadio.Button4Click(Sender: TObject);

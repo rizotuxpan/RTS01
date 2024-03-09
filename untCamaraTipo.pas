@@ -3,7 +3,8 @@ unit untCamaraTipo;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
@@ -49,21 +50,21 @@ implementation
 
 procedure TCamaraTipo.Button1Click(Sender: TObject);
 begin
-   Cat_Camara_TipoTable.Insert;
+  Cat_camara_tipoTable.Insert;
   DBEdit3.Text := '0';
 end;
 
 procedure TCamaraTipo.Button2Click(Sender: TObject);
 begin
-  Cat_Camara_TipoTable.Edit;
-  Cat_Camara_TipoTable.Post;
-  Cat_Camara_TipoTable.Refresh;
+  Cat_camara_tipoTable.Edit;
+  Cat_camara_tipoTable.Post;
+  Cat_camara_tipoTable.Refresh;
 end;
 
 procedure TCamaraTipo.Button3Click(Sender: TObject);
 begin
-  Cat_Camara_TipoTable.Edit;
-  Cat_Camara_TipoTable.Delete;
+  Cat_camara_tipoTable.Edit;
+  Cat_camara_tipoTable.Delete;
 end;
 
 procedure TCamaraTipo.Button4Click(Sender: TObject);

@@ -1,9 +1,10 @@
-unit UntGabinete;
+unit UntComponenteGabinete;
 
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
@@ -13,7 +14,7 @@ uses
   Vcl.Grids, Vcl.DBGrids, Vcl.Buttons;
 
 type
-  TGabinete = class(TForm)
+  TComponenteGabinete = class(TForm)
     Panel1: TPanel;
     DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
@@ -32,8 +33,10 @@ type
     DBEdit5: TDBEdit;
     DBMemo1: TDBMemo;
     RtsoftwareConnection: TFDConnection;
-    DataSource0: TDataSource;
+    Label2: TLabel;
+    DBEdit6: TDBEdit;
     Cat_gabineteTable: TFDQuery;
+    DataSource1: TDataSource;
     Cat_gabineteTableID: TIntegerField;
     Cat_gabineteTableARTICULO: TWideStringField;
     Cat_gabineteTableCLAVE: TWideStringField;
@@ -43,34 +46,10 @@ type
     Cat_gabineteTablePRECIO: TCurrencyField;
     Cat_gabineteTableSERIE: TStringField;
     Cat_gabineteTableURL: TWideStringField;
-    Label2: TLabel;
-    DBEdit6: TDBEdit;
-    GroupBox1: TGroupBox;
-    DBGrid2: TDBGrid;
-    lblFolio: TLabel;
-    btnAgregaSwitch: TButton;
-    Button6: TButton;
-    Edit1: TEdit;
-    FDQuery1: TFDQuery;
-    FDQuery1ID: TIntegerField;
-    FDQuery1SERIE: TStringField;
-    FDQuery1FACTURA: TStringField;
-    FDQuery1IP: TStringField;
-    FDQuery1NOMBRE: TStringField;
-    FDQuery1PRECIO: TCurrencyField;
-    FDQuery1FOLIO: TStringField;
-    FDQuery1ARTICULO: TWideStringField;
-    FDQuery1DESCRIPCION: TWideStringField;
-    FDQuery1FK_MODELO: TIntegerField;
-    DataSource1: TDataSource;
-    DBGrid3: TDBGrid;
-    Cat_switchTable: TFDQuery;
-    DataSource2: TDataSource;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
-    procedure btnAgregaSwitchClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -78,46 +57,32 @@ type
   end;
 
 var
-  Gabinete: TGabinete;
+  ComponenteGabinete: TComponenteGabinete;
 
 implementation
 
 {$R *.dfm}
 
-procedure TGabinete.btnAgregaSwitchClick(Sender: TObject);
-var
-  Filtro: string;
+procedure TComponenteGabinete.Button1Click(Sender: TObject);
 begin
-  Filtro := Edit1.Text;
-
-  FDQuery1.SQL.Text := 'SELECT * FROM CAT_SWITCH WHERE FOLIO = :pFOLIO';
-  FDQuery1.Params.ParamByName('pFOLIO').Value := Filtro;
-
-  //Ejecutar la consulta
-  FDQuery1.Close;
-  FDQuery1.Open;
-end;
-
-procedure TGabinete.Button1Click(Sender: TObject);
-begin
-  Cat_GabineteTable.Insert;
+  Cat_gabineteTable.Insert;
   DBEdit3.Text := '0';
 end;
 
-procedure TGabinete.Button2Click(Sender: TObject);
+procedure TComponenteGabinete.Button2Click(Sender: TObject);
 begin
-  Cat_GabineteTable.Edit;
-  Cat_GabineteTable.Post;
-  Cat_GabineteTable.Refresh;
+  Cat_gabineteTable.Edit;
+  Cat_gabineteTable.Post;
+  Cat_gabineteTable.Refresh;
 end;
 
-procedure TGabinete.Button3Click(Sender: TObject);
+procedure TComponenteGabinete.Button3Click(Sender: TObject);
 begin
-  Cat_GabineteTable.Edit;
-  Cat_GabineteTable.Delete;
+  Cat_gabineteTable.Edit;
+  Cat_gabineteTable.Delete;
 end;
 
-procedure TGabinete.Button4Click(Sender: TObject);
+procedure TComponenteGabinete.Button4Click(Sender: TObject);
 begin
   Self.Visible := False;
 end;

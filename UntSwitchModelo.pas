@@ -3,7 +3,8 @@ unit UntSwitchModelo;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
@@ -60,21 +61,21 @@ implementation
 
 procedure TSwitchModelo.Button1Click(Sender: TObject);
 begin
-  Cat_Switch_ModeloTable.Insert;
+  Cat_switch_modeloTable.Insert;
   DBEdit3.Text := '0';
 end;
 
 procedure TSwitchModelo.Button2Click(Sender: TObject);
 begin
-  Cat_Switch_ModeloTable.Edit;
-  Cat_Switch_ModeloTable.Post;
-  Cat_Switch_ModeloTable.Refresh;
+  Cat_switch_modeloTable.Edit;
+  Cat_switch_modeloTable.Post;
+  Cat_switch_modeloTable.Refresh;
 end;
 
 procedure TSwitchModelo.Button3Click(Sender: TObject);
 begin
-  Cat_Switch_ModeloTable.Edit;
-  Cat_Switch_ModeloTable.Delete;
+  Cat_switch_modeloTable.Edit;
+  Cat_switch_modeloTable.Delete;
 end;
 
 procedure TSwitchModelo.Button4Click(Sender: TObject);

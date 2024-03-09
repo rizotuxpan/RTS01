@@ -82,8 +82,6 @@ object SwitchMarca: TSwitchMarca
     Height = 397
     Align = alRight
     TabOrder = 1
-    ExplicitLeft = 358
-    ExplicitHeight = 417
     DesignSize = (
       358
       397)

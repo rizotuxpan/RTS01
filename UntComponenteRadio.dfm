@@ -112,9 +112,6 @@ object ComponenteRadio: TComponenteRadio
     Height = 520
     Align = alRight
     TabOrder = 1
-    ExplicitLeft = 448
-    ExplicitTop = -31
-    ExplicitHeight = 551
     DesignSize = (
       358
       520)

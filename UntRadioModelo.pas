@@ -3,7 +3,8 @@ unit UntRadioModelo;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
@@ -60,21 +61,21 @@ implementation
 
 procedure TRadioModelo.Button1Click(Sender: TObject);
 begin
-  Cat_Radio_ModeloTable.Insert;
+  Cat_radio_modeloTable.Insert;
   DBEdit3.Text := '0';
 end;
 
 procedure TRadioModelo.Button2Click(Sender: TObject);
 begin
-  Cat_Radio_ModeloTable.Edit;
-  Cat_Radio_ModeloTable.Post;
-  Cat_Radio_ModeloTable.Refresh;
+  Cat_radio_modeloTable.Edit;
+  Cat_radio_modeloTable.Post;
+  Cat_radio_modeloTable.Refresh;
 end;
 
 procedure TRadioModelo.Button3Click(Sender: TObject);
 begin
-  Cat_Radio_ModeloTable.Edit;
-  Cat_Radio_ModeloTable.Delete;
+  Cat_radio_modeloTable.Edit;
+  Cat_radio_modeloTable.Delete;
 end;
 
 procedure TRadioModelo.Button4Click(Sender: TObject);

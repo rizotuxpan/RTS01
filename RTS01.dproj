@@ -150,9 +150,11 @@
             <Form>ComponenteRadio</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="UntGabinete.pas">
-            <Form>Gabinete</Form>
-            <FormType>dfm</FormType>
+        <DCCReference Include="UntComponenteGabinete.pas">
+            <Form>ComponenteGabinete</Form>
+        </DCCReference>
+        <DCCReference Include="UntComponenteGabineteSwitch.pas">
+            <Form>ComponenteGabineteSwitch</Form>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -180,6 +182,12 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">
+                <DeployFile LocalName="All Platforms\Release\RTS01" Configuration="Release" Class="ProjectOutput">
+                    <Platform Name="All Platforms">
+                        <RemoteName>RTS01</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="Win32\Debug\RTS01.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>RTS01.exe</RemoteName>

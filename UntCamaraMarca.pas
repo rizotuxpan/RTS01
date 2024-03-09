@@ -3,7 +3,8 @@ unit UntCamaraMarca;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.DBCtrls, Vcl.Grids,
   Vcl.DBGrids, Vcl.ExtCtrls, Vcl.StdCtrls, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
@@ -51,21 +52,21 @@ implementation
 
 procedure TCamaraMarca.Button1Click(Sender: TObject);
 begin
-  Cat_Camara_MarcaTable.Insert;
+  Cat_camara_marcaTable.Insert;
   DBEdit3.Text := '0';
 end;
 
 procedure TCamaraMarca.Button2Click(Sender: TObject);
 begin
-  Cat_Camara_MarcaTable.Edit;
-  Cat_Camara_MarcaTable.Post;
-  Cat_Camara_MarcaTable.Refresh;
+  Cat_camara_marcaTable.Edit;
+  Cat_camara_marcaTable.Post;
+  Cat_camara_marcaTable.Refresh;
 end;
 
 procedure TCamaraMarca.Button3Click(Sender: TObject);
 begin
-  Cat_Camara_MarcaTable.Edit;
-  Cat_Camara_MarcaTable.Delete;
+  Cat_camara_marcaTable.Edit;
+  Cat_camara_marcaTable.Delete;
 end;
 
 procedure TCamaraMarca.Button4Click(Sender: TObject);

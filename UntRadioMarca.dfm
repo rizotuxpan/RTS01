@@ -83,9 +83,6 @@ object RadioMarca: TRadioMarca
     Height = 414
     Align = alRight
     TabOrder = 1
-    ExplicitLeft = 378
-    ExplicitTop = -18
-    ExplicitHeight = 397
     DesignSize = (
       358
       414)

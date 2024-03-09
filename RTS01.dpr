@@ -16,7 +16,8 @@ uses
   UntComponenteCamara in 'UntComponenteCamara.pas' {ComponenteCamara},
   UntComponenteSwitch in 'UntComponenteSwitch.pas' {ComponenteSwitch},
   UntComponenteRadio in 'UntComponenteRadio.pas' {ComponenteRadio},
-  UntGabinete in 'UntGabinete.pas' {Gabinete};
+  UntComponenteGabinete in 'UntComponenteGabinete.pas' {ComponenteGabinete},
+  UntComponenteGabineteSwitch in 'UntComponenteGabineteSwitch.pas' {ComponenteGabineteSwitch};
 
 {$R *.res}
 
@@ -35,6 +36,8 @@ begin
   Application.CreateForm(TComponenteCamara, ComponenteCamara);
   Application.CreateForm(TComponenteSwitch, ComponenteSwitch);
   Application.CreateForm(TComponenteRadio, ComponenteRadio);
-  Application.CreateForm(TGabinete, Gabinete);
+  Application.CreateForm(TComponenteGabinete, ComponenteGabinete);
+  Application.CreateForm(TComponenteGabineteSwitch, ComponenteGabineteSwitch);
   Application.Run;
+
 end.

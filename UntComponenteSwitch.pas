@@ -3,7 +3,8 @@ unit UntComponenteSwitch;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
@@ -73,21 +74,21 @@ implementation
 
 procedure TComponenteSwitch.Button1Click(Sender: TObject);
 begin
-  Cat_SwitchTable.Insert;
+  Cat_switchTable.Insert;
   DBEdit3.Text := '0';
 end;
 
 procedure TComponenteSwitch.Button2Click(Sender: TObject);
 begin
-  Cat_SwitchTable.Edit;
-  Cat_SwitchTable.Post;
-  Cat_SwitchTable.Refresh;
+  Cat_switchTable.Edit;
+  Cat_switchTable.Post;
+  Cat_switchTable.Refresh;
 end;
 
 procedure TComponenteSwitch.Button3Click(Sender: TObject);
 begin
-  Cat_SwitchTable.Edit;
-  Cat_SwitchTable.Delete;
+  Cat_switchTable.Edit;
+  Cat_switchTable.Delete;
 end;
 
 procedure TComponenteSwitch.Button4Click(Sender: TObject);
