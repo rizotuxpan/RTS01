@@ -3,7 +3,7 @@ program RTS01;
 uses
   Vcl.Forms,
   UntMainForm in 'UntMainForm.pas' {WndMainForm},
-  DatMainForm in 'DatMainForm.pas' {DMMainForm: TDataModule},
+  DataModule in 'DataModule.pas' {DMMainForm: TDataModule},
   UntCamaraMarca in 'UntCamaraMarca.pas' {CamaraMarca},
   untCamaraTipo in 'untCamaraTipo.pas' {CamaraTipo},
   UntCamaraModelo in 'UntCamaraModelo.pas' {CamaraModelo},

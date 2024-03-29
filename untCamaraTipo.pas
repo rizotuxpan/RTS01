@@ -28,7 +28,6 @@ type
     Button3: TButton;
     DBEdit3: TDBEdit;
     Button4: TButton;
-    RtsoftwareConnection: TFDConnection;
     DataSource1: TDataSource;
     Cat_camara_tipoTable: TFDQuery;
     procedure Button4Click(Sender: TObject);

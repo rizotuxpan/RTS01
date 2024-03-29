@@ -4,67 +4,81 @@ object CamaraModelo: TCamaraModelo
   Align = alClient
   BorderStyle = bsNone
   Caption = 'CamaraModelo'
-  ClientHeight = 458
-  ClientWidth = 772
+  ClientHeight = 916
+  ClientWidth = 1544
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
+  Font.Height = -24
   Font.Name = 'Segoe UI'
   Font.Style = []
-  TextHeight = 15
+  PixelsPerInch = 192
+  TextHeight = 32
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 414
-    Height = 458
+    Width = 828
+    Height = 916
+    Margins.Left = 6
+    Margins.Top = 6
+    Margins.Right = 6
+    Margins.Bottom = 6
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1
-      Width = 412
-      Height = 431
+      Width = 826
+      Height = 864
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Align = alClient
       DataSource = DataSource1
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -24
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <
         item
           Expanded = False
           FieldName = 'ID'
+          Width = -1
           Visible = False
         end
         item
           Expanded = False
           FieldName = 'CLAVE'
-          Width = 60
+          Width = 120
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'DESCRIPCION'
-          Width = 150
+          Width = 300
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'URL'
-          Width = 200
+          Width = 400
           Visible = True
         end>
     end
     object DBNavigator1: TDBNavigator
       Left = 1
-      Top = 432
-      Width = 412
-      Height = 25
+      Top = 865
+      Width = 826
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       DataSource = DataSource1
       VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
       Align = alBottom
@@ -72,159 +86,235 @@ object CamaraModelo: TCamaraModelo
     end
   end
   object Panel2: TPanel
-    Left = 414
+    Left = 828
     Top = 0
-    Width = 358
-    Height = 458
+    Width = 716
+    Height = 916
+    Margins.Left = 6
+    Margins.Top = 6
+    Margins.Right = 6
+    Margins.Bottom = 6
     Align = alRight
     TabOrder = 1
     DesignSize = (
-      358
-      458)
+      716
+      916)
     object Label1: TLabel
-      Left = 14
-      Top = 32
-      Width = 29
-      Height = 15
+      Left = 28
+      Top = 64
+      Width = 58
+      Height = 32
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Caption = 'Clave'
     end
     object Label2: TLabel
-      Left = 14
-      Top = 61
-      Width = 62
-      Height = 15
+      Left = 28
+      Top = 122
+      Width = 124
+      Height = 32
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Caption = 'Descripci'#243'n'
     end
     object Label3: TLabel
-      Left = 14
-      Top = 156
-      Width = 21
-      Height = 15
+      Left = 28
+      Top = 312
+      Width = 41
+      Height = 32
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Caption = 'URL'
     end
     object Label4: TLabel
-      Left = 14
-      Top = 190
-      Width = 33
-      Height = 15
+      Left = 28
+      Top = 380
+      Width = 65
+      Height = 32
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Caption = 'Marca'
     end
     object Label5: TLabel
-      Left = 14
-      Top = 215
-      Width = 23
-      Height = 15
+      Left = 28
+      Top = 430
+      Width = 47
+      Height = 32
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Caption = 'Tipo'
     end
     object Label6: TLabel
-      Left = 14
-      Top = 242
-      Width = 55
-      Height = 15
+      Left = 28
+      Top = 484
+      Width = 111
+      Height = 32
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Caption = 'Megapixel'
     end
     object Label7: TLabel
-      Left = 14
-      Top = 276
-      Width = 58
-      Height = 15
+      Left = 28
+      Top = 552
+      Width = 115
+      Height = 32
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Caption = 'Resoluci'#243'n'
     end
     object Label8: TLabel
-      Left = 80
-      Top = 276
-      Width = 57
-      Height = 15
+      Left = 160
+      Top = 552
+      Width = 111
+      Height = 32
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Caption = 'Ancho (W)'
     end
     object Label9: TLabel
-      Left = 216
-      Top = 275
-      Width = 42
-      Height = 15
+      Left = 432
+      Top = 550
+      Width = 81
+      Height = 32
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Caption = 'Alto (H)'
     end
     object DBEdit1: TDBEdit
-      Left = 80
-      Top = 29
-      Width = 127
-      Height = 23
+      Left = 160
+      Top = 58
+      Width = 254
+      Height = 40
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       DataField = 'CLAVE'
       DataSource = DataSource1
       TabOrder = 0
     end
     object DBMemo1: TDBMemo
-      Left = 80
-      Top = 58
-      Width = 259
-      Height = 89
+      Left = 160
+      Top = 116
+      Width = 518
+      Height = 178
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       DataField = 'DESCRIPCION'
       DataSource = DataSource1
       TabOrder = 1
     end
     object DBEdit2: TDBEdit
-      Left = 80
-      Top = 153
-      Width = 259
-      Height = 23
+      Left = 160
+      Top = 306
+      Width = 518
+      Height = 40
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       DataField = 'URL'
       DataSource = DataSource1
       TabOrder = 2
     end
     object Button1: TButton
-      Left = 16
-      Top = 407
-      Width = 75
-      Height = 25
+      Left = 32
+      Top = 814
+      Width = 150
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Anchors = [akRight, akBottom]
       Caption = 'Nuevo'
       TabOrder = 3
       OnClick = Button1Click
     end
     object Button2: TButton
-      Left = 97
-      Top = 407
-      Width = 75
-      Height = 25
+      Left = 194
+      Top = 814
+      Width = 150
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Anchors = [akRight, akBottom]
       Caption = 'Guardar'
       TabOrder = 4
       OnClick = Button2Click
     end
     object Button3: TButton
-      Left = 178
-      Top = 407
-      Width = 75
-      Height = 25
+      Left = 356
+      Top = 814
+      Width = 150
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Anchors = [akRight, akBottom]
       Caption = 'Eliminar'
       TabOrder = 5
       OnClick = Button3Click
     end
     object DBEdit3: TDBEdit
-      Left = 288
-      Top = 29
-      Width = 49
-      Height = 23
+      Left = 576
+      Top = 58
+      Width = 98
+      Height = 40
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       DataField = 'ID'
       DataSource = DataSource1
       TabOrder = 6
     end
     object Button4: TButton
-      Left = 259
-      Top = 407
-      Width = 75
-      Height = 25
+      Left = 518
+      Top = 814
+      Width = 150
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Anchors = [akRight, akBottom]
       Caption = 'Cerrar'
       TabOrder = 7
       OnClick = Button4Click
     end
     object DBLookupComboBox1: TDBLookupComboBox
-      Left = 80
-      Top = 182
-      Width = 259
-      Height = 23
+      Left = 160
+      Top = 364
+      Width = 518
+      Height = 40
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       DataField = 'FK_CAMARA_MARCA'
       DataSource = DataSource1
       KeyField = 'ID'
@@ -233,10 +323,14 @@ object CamaraModelo: TCamaraModelo
       TabOrder = 8
     end
     object DBLookupComboBox2: TDBLookupComboBox
-      Left = 80
-      Top = 211
-      Width = 259
-      Height = 23
+      Left = 160
+      Top = 422
+      Width = 518
+      Height = 40
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       DataField = 'FK_CAMARA_TIPO'
       DataSource = DataSource1
       KeyField = 'ID'
@@ -245,40 +339,44 @@ object CamaraModelo: TCamaraModelo
       TabOrder = 9
     end
     object DBEdit4: TDBEdit
-      Left = 80
-      Top = 240
-      Width = 54
-      Height = 23
+      Left = 160
+      Top = 480
+      Width = 108
+      Height = 40
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       DataField = 'MPX'
       DataSource = DataSource1
       TabOrder = 10
     end
     object DBEdit5: TDBEdit
-      Left = 144
-      Top = 272
-      Width = 49
-      Height = 23
+      Left = 288
+      Top = 544
+      Width = 98
+      Height = 40
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       DataField = 'RESW'
       DataSource = DataSource1
       TabOrder = 11
     end
     object DBEdit6: TDBEdit
-      Left = 264
-      Top = 272
-      Width = 49
-      Height = 23
+      Left = 528
+      Top = 544
+      Width = 98
+      Height = 40
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       DataField = 'RESH'
       DataSource = DataSource1
       TabOrder = 12
     end
-  end
-  object RtsoftwareConnection: TFDConnection
-    Params.Strings = (
-      'ConnectionDef=RTSoftware')
-    Connected = True
-    LoginPrompt = False
-    Left = 72
-    Top = 320
   end
   object DataSource1: TDataSource
     DataSet = Cat_camara_modeloTable
@@ -286,8 +384,7 @@ object CamaraModelo: TCamaraModelo
     Top = 320
   end
   object Cat_camara_modeloTable: TFDQuery
-    Active = True
-    Connection = RtsoftwareConnection
+    ConnectionName = 'RTSoftware'
     SQL.Strings = (
       'SELECT * FROM CAT_CAMARA_MODELO '
       'ORDER BY CLAVE')
@@ -338,9 +435,8 @@ object CamaraModelo: TCamaraModelo
     end
   end
   object Cat_camara_marcaTable: TFDQuery
-    Active = True
     CachedUpdates = True
-    Connection = RtsoftwareConnection
+    ConnectionName = 'RTSoftware'
     SQL.Strings = (
       
         'SELECT ID, DESCRIPCION FROM CAT_CAMARA_MARCA ORDER BY DESCRIPCIO' +
@@ -361,9 +457,8 @@ object CamaraModelo: TCamaraModelo
     end
   end
   object Cat_camara_tipoTable: TFDQuery
-    Active = True
     CachedUpdates = True
-    Connection = RtsoftwareConnection
+    ConnectionName = 'RTSoftware'
     SQL.Strings = (
       'SELECT ID, DESCRIPCION FROM CAT_CAMARA_TIPO ORDER BY DESCRIPCION')
     Left = 185

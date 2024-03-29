@@ -1,4 +1,4 @@
-unit DatMainForm;
+unit DataModule;
 
 interface
 
@@ -8,16 +8,11 @@ uses
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.IB,
   FireDAC.Phys.IBDef, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
   FireDAC.DApt, FireDAC.VCLUI.Wait, FireDAC.Comp.UI, Data.DB,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, FireDAC.Phys.FB, FireDAC.Phys.FBDef;
 
 type
-  TDMMainForm = class(TDataModule)
-    RtsoftwareConnection: TFDConnection;
-    Cat_camara_marcaTable: TFDQuery;
-    dbMarca: TDataSource;
-    Cat_camara_modeloTable: TFDQuery;
-    dbModelo: TDataSource;
-    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+  TDMMain = class(TDataModule)
+    FDConnection: TFDConnection;
   private
     { Private declarations }
   public
@@ -25,7 +20,7 @@ type
   end;
 
 var
-  DMMainForm: TDMMainForm;
+  DMMain: TDMMain;
 
 implementation
 

@@ -4,175 +4,213 @@ object CamaraTipo: TCamaraTipo
   Align = alClient
   BorderStyle = bsNone
   Caption = 'CamaraTipo'
-  ClientHeight = 482
-  ClientWidth = 751
+  ClientHeight = 964
+  ClientWidth = 1502
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
+  Font.Height = -24
   Font.Name = 'Segoe UI'
   Font.Style = []
-  TextHeight = 15
+  PixelsPerInch = 192
+  TextHeight = 32
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 393
-    Height = 482
+    Width = 786
+    Height = 964
+    Margins.Left = 6
+    Margins.Top = 6
+    Margins.Right = 6
+    Margins.Bottom = 6
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
-    ExplicitWidth = 392
-    ExplicitHeight = 417
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1
-      Width = 391
-      Height = 455
+      Width = 784
+      Height = 912
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Align = alClient
       DataSource = DataSource1
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
-      TitleFont.Height = -12
+      TitleFont.Height = -24
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
       Columns = <
         item
           Expanded = False
           FieldName = 'ID'
+          Width = -1
           Visible = False
         end
         item
           Expanded = False
           FieldName = 'CLAVE'
-          Width = 60
+          Width = 120
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'DESCRIPCION'
-          Width = 300
+          Width = 600
           Visible = True
         end>
     end
     object DBNavigator1: TDBNavigator
       Left = 1
-      Top = 456
-      Width = 391
-      Height = 25
+      Top = 913
+      Width = 784
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       DataSource = DataSource1
       VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
       Align = alBottom
       TabOrder = 1
-      ExplicitTop = 391
-      ExplicitWidth = 390
     end
   end
   object Panel2: TPanel
-    Left = 393
+    Left = 786
     Top = 0
-    Width = 358
-    Height = 482
+    Width = 716
+    Height = 964
+    Margins.Left = 6
+    Margins.Top = 6
+    Margins.Right = 6
+    Margins.Bottom = 6
     Align = alRight
     TabOrder = 1
     DesignSize = (
-      358
-      482)
+      716
+      964)
     object Label1: TLabel
-      Left = 14
-      Top = 32
-      Width = 29
-      Height = 15
+      Left = 28
+      Top = 64
+      Width = 58
+      Height = 32
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Caption = 'Clave'
     end
     object Label2: TLabel
-      Left = 14
-      Top = 61
-      Width = 62
-      Height = 15
+      Left = 28
+      Top = 122
+      Width = 124
+      Height = 32
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Caption = 'Descripci'#243'n'
     end
     object DBEdit1: TDBEdit
-      Left = 82
-      Top = 29
-      Width = 119
-      Height = 23
+      Left = 164
+      Top = 58
+      Width = 238
+      Height = 40
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       DataField = 'CLAVE'
       DataSource = DataSource1
       TabOrder = 0
     end
     object DBMemo1: TDBMemo
-      Left = 82
-      Top = 58
-      Width = 259
-      Height = 89
+      Left = 164
+      Top = 116
+      Width = 518
+      Height = 178
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       DataField = 'DESCRIPCION'
       DataSource = DataSource1
       TabOrder = 1
     end
     object Button1: TButton
-      Left = 16
-      Top = 431
-      Width = 75
-      Height = 25
+      Left = 32
+      Top = 862
+      Width = 150
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Anchors = [akRight, akBottom]
       Caption = 'Nuevo'
       TabOrder = 2
       OnClick = Button1Click
-      ExplicitTop = 366
     end
     object Button2: TButton
-      Left = 97
-      Top = 431
-      Width = 75
-      Height = 25
+      Left = 194
+      Top = 862
+      Width = 150
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Anchors = [akRight, akBottom]
       Caption = 'Guardar'
       TabOrder = 3
       OnClick = Button2Click
-      ExplicitTop = 366
     end
     object Button3: TButton
-      Left = 178
-      Top = 431
-      Width = 75
-      Height = 25
+      Left = 356
+      Top = 862
+      Width = 150
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Anchors = [akRight, akBottom]
       Caption = 'Eliminar'
       TabOrder = 4
       OnClick = Button3Click
-      ExplicitTop = 366
     end
     object DBEdit3: TDBEdit
-      Left = 288
-      Top = 29
-      Width = 49
-      Height = 23
+      Left = 576
+      Top = 58
+      Width = 98
+      Height = 40
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       DataField = 'ID'
       DataSource = DataSource1
       TabOrder = 5
       Visible = False
     end
     object Button4: TButton
-      Left = 259
-      Top = 431
-      Width = 75
-      Height = 25
+      Left = 518
+      Top = 862
+      Width = 150
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
       Anchors = [akRight, akBottom]
       Caption = 'Cerrar'
       TabOrder = 6
       OnClick = Button4Click
-      ExplicitTop = 366
     end
-  end
-  object RtsoftwareConnection: TFDConnection
-    Params.Strings = (
-      'ConnectionDef=RTSoftware')
-    Connected = True
-    LoginPrompt = False
-    Left = 72
-    Top = 320
   end
   object DataSource1: TDataSource
     DataSet = Cat_camara_tipoTable
@@ -180,8 +218,7 @@ object CamaraTipo: TCamaraTipo
     Top = 320
   end
   object Cat_camara_tipoTable: TFDQuery
-    Active = True
-    Connection = RtsoftwareConnection
+    ConnectionName = 'RTSoftware'
     SQL.Strings = (
       'SELECT * FROM CAT_CAMARA_TIPO ORDER BY CLAVE')
     Left = 188

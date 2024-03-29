@@ -11,7 +11,7 @@ uses
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
   FireDAC.Phys.IB, FireDAC.Phys.IBDef, FireDAC.VCLUI.Wait, FireDAC.Stan.Param,
   FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, Vcl.Mask;
+  FireDAC.Comp.Client, Vcl.Mask, Vcl.Buttons;
 
 type
   TCamaraMarca = class(TForm)
@@ -20,7 +20,6 @@ type
     DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
     Label1: TLabel;
-    RtsoftwareConnection: TFDConnection;
     Cat_camara_marcaTable: TFDQuery;
     DataSource1: TDataSource;
     Label2: TLabel;
@@ -49,6 +48,8 @@ var
 implementation
 
 {$R *.dfm}
+
+uses DataModule;
 
 procedure TCamaraMarca.Button1Click(Sender: TObject);
 begin

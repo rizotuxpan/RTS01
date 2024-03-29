@@ -30,7 +30,6 @@ type
     Button3: TButton;
     DBEdit3: TDBEdit;
     Button4: TButton;
-    RtsoftwareConnection: TFDConnection;
     DataSource1: TDataSource;
     Cat_camara_modeloTable: TFDQuery;
     Cat_camara_marcaTable: TFDQuery;
@@ -77,6 +76,8 @@ var
 implementation
 
 {$R *.dfm}
+
+uses DataModule;
 
 procedure TCamaraModelo.Button1Click(Sender: TObject);
 begin

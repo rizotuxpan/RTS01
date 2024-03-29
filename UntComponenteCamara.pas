@@ -15,7 +15,6 @@ uses
 
 type
   TComponenteCamara = class(TForm)
-    RtsoftwareConnection: TFDConnection;
     DataSource1: TDataSource;
     Cat_camara_modeloTable: TFDQuery;
     Cat_camaraTable: TFDQuery;
@@ -82,6 +81,8 @@ var
 implementation
 
 {$R *.dfm}
+
+uses DataModule;
 
 procedure TComponenteCamara.Button1Click(Sender: TObject);
 begin

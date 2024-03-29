@@ -40,9 +40,13 @@ type
     FDQuery2: TFDQuery;
     DataSource3: TDataSource;
     IDGabinete: TDBText;
-    IDSWITCH: TDBText;
+    IDSwitch: TDBText;
+    FDQuery3: TFDQuery;
+    FDQuery4: TFDQuery;
     procedure Panel2Resize(Sender: TObject);
     procedure DataSource1DataChange(Sender: TObject; Field: TField);
+    procedure BtnPonerClick(Sender: TObject);
+    procedure BtnQuitarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -61,17 +65,25 @@ begin
   Result := StrToIntDef(Str, 0) <> 0;
 end;
 
+procedure TComponenteGabineteSwitch.BtnPonerClick(Sender: TObject);
+begin
+  FDQuery3.Close;
+  FDQuery3.ParamByName('pGABINETE').AsInteger := StrToInt(IDGabinete.Caption);
+  FDQuery3.ParamByName('pSWItCH').AsInteger := StrToInt(IDSwitch.Caption);
+  FDQuery3.ExecSQL;
+end;
+
+procedure TComponenteGabineteSwitch.BtnQuitarClick(Sender: TObject);
+begin
+  FDQuery4.Close;
+  FDQuery4.ParamByName('pGABINETE').AsInteger := StrToInt(IDGabinete.Caption);
+  FDQuery4.ParamByName('pSWItCH').AsInteger := StrToInt(IDSwitch.Caption);
+  FDQuery4.ExecSQL;
+end;
+
 procedure TComponenteGabineteSwitch.DataSource1DataChange(Sender: TObject;
   Field: TField);
 begin
-  //if IsNumber(IDGabinete.Caption) and IsNumber(IDSwitch.Caption) then
-  //begin
-    //FDQuery2.SQL.Add('SELECT * FROM GABINETE_SWITCH WHERE FK_GABINETE = :pGABINETE');
-    //FDQuery2.ParamByName('pGABINETE').Value := IDGabinete.Caption;
-    //FDQuery2.ParamByName('pSWITCH').Value := IDSwitch.Caption;
-    //FDQuery2.Close;
-    //FDQuery2.Open();
-  //end;
   if IsNumber(IDGabinete.Caption) then
   begin
     FDQuery2.ParamByName('pGABINETE').Value := IDGabinete.Caption;

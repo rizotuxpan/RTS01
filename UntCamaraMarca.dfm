@@ -1,6 +1,10 @@
 object CamaraMarca: TCamaraMarca
   Left = 0
   Top = 0
+  Margins.Left = 2
+  Margins.Top = 2
+  Margins.Right = 2
+  Margins.Bottom = 2
   Align = alClient
   BorderStyle = bsNone
   Caption = 'Marca de c'#225'maras'
@@ -180,17 +184,7 @@ object CamaraMarca: TCamaraMarca
       OnClick = Button4Click
     end
   end
-  object RtsoftwareConnection: TFDConnection
-    Params.Strings = (
-      'ConnectionDef=RTSoftware')
-    Connected = True
-    LoginPrompt = False
-    Left = 72
-    Top = 320
-  end
   object Cat_camara_marcaTable: TFDQuery
-    Active = True
-    Connection = RtsoftwareConnection
     SQL.Strings = (
       'SELECT * FROM CAT_CAMARA_MARCA ORDER BY CLAVE')
     Left = 184
@@ -198,7 +192,7 @@ object CamaraMarca: TCamaraMarca
   end
   object DataSource1: TDataSource
     DataSet = Cat_camara_marcaTable
-    Left = 296
-    Top = 320
+    Left = 424
+    Top = 304
   end
 end
